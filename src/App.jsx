@@ -471,7 +471,7 @@ export default function App() {
               {SOCIALS.map(s => (
                 <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
                   className="social-link"
-                  style={{padding:"0.7rem 2rem",border:`1px solid ${C.gold}`,background:"transparent",
+                  style={{padding:"0.7rem 0",minWidth:"160px",textAlign:"center",border:`1px solid ${C.gold}`,background:"transparent",
                     color:C.gold,fontSize:"0.68rem",letterSpacing:"0.18em",textTransform:"uppercase",
                     fontFamily:FONTS.ui,textDecoration:"none",transition:"all .2s",
                     textShadow:GG(0.4),boxShadow:`0 0 12px rgba(201,168,76,0.15)`}}>
