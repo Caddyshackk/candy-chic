@@ -472,7 +472,8 @@ export default function App() {
               gridTemplateColumns: mobile ? "repeat(2, minmax(0, 1fr))" : "repeat(3, 160px)",
               gap:"0.7rem",
               justifyContent:"center",
-              width: mobile ? "85%" : "auto",
+              padding: mobile ? "0.85rem 0" : "0.7rem 0",
+              width: mobile ? "95%" : "auto",
             }}>
               {[...SOCIALS, ...STREAMING].map(s => (
                 <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
