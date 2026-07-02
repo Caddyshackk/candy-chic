@@ -469,9 +469,10 @@ export default function App() {
             {/* all links in one uniform grid */}
             <div className="curtain d3" style={{
               display:"grid",
-              gridTemplateColumns: mobile ? "1fr 1fr" : "repeat(3, 160px)",
+              gridTemplateColumns: mobile ? "repeat(2, minmax(0, 1fr))" : "repeat(3, 160px)",
               gap:"0.7rem",
               justifyContent:"center",
+              width: mobile ? "85%" : "auto",
             }}>
               {[...SOCIALS, ...STREAMING].map(s => (
                 <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
