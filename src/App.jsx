@@ -466,28 +466,21 @@ export default function App() {
               ))}
             </div>
 
-            {/* social links with vibrant gold border */}
-            <div className="curtain d3" style={{display:"flex",gap:"0.8rem",justifyContent:"center",flexWrap:"wrap"}}>
-              {SOCIALS.map(s => (
-                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
-                  className="social-link"
-                  style={{padding:"0.7rem 0",minWidth:"160px",textAlign:"center",border:`1px solid ${C.gold}`,background:"transparent",
-                    color:C.gold,fontSize:"0.68rem",letterSpacing:"0.18em",textTransform:"uppercase",
-                    fontFamily:FONTS.ui,textDecoration:"none",transition:"all .2s",
-                    textShadow:GG(0.4),boxShadow:`0 0 12px rgba(201,168,76,0.15)`}}>
-                  {s.label}
-                </a>
-              ))}
-            </div>
-            
-            {/* streaming links */}
-            <div className="curtain d4" style={{display:"flex",gap:"0.7rem",justifyContent:"center",flexWrap:"wrap"}}>
-              {STREAMING.map(s => (
+            {/* all links in one uniform grid */}
+            <div className="curtain d3" style={{
+              display:"grid",
+              gridTemplateColumns: mobile ? "1fr 1fr" : "repeat(3, 160px)",
+              gap:"0.7rem",
+              justifyContent:"center",
+            }}>
+              {[...SOCIALS, ...STREAMING].map(s => (
                 <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
                   className="stream-btn"
-                  style={{padding:"0.7rem 2rem",border:`1px solid ${C.gold}`,background:"transparent",
-                    color:C.gold,fontSize:"0.68rem",letterSpacing:"0.18em",textTransform:"uppercase",
-                    fontFamily:FONTS.ui,textDecoration:"none",transition:"all .2s",
+                  style={{padding:"0.7rem 0",textAlign:"center",
+                    border:`1px solid ${C.gold}`,background:"transparent",
+                    color:C.gold,fontSize:"0.68rem",letterSpacing:"0.18em",
+                    textTransform:"uppercase",fontFamily:FONTS.ui,
+                    textDecoration:"none",transition:"all .2s",
                     textShadow:GG(0.4),boxShadow:`0 0 12px rgba(201,168,76,0.15)`}}>
                   {s.label}
                 </a>
