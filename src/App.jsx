@@ -512,8 +512,8 @@ export default function App() {
               </p>
               <MarqueeDots/>
               <p style={{fontSize:"0.88rem",marginBottom:"0.6rem",fontFamily:FONTS.body}}>
-                <a href="mailto:howdy@candychic.com" style={{color:C.dimText,textDecoration:"none"}}>
-                  howdy@candychic.com
+                <a href="mailto:Candychicbops@gmail.com" style={{color:C.dimText,textDecoration:"none"}}>
+                  Candychicbops@gmail.com
                 </a>
               </p>
 
