@@ -21,15 +21,13 @@ const SOCIALS = [
 ];
 
 const CONTACTS = [
-  ["Booking",    "booking@candychic.com"],
-  ["Management", "management@candychic.com"],
-  ["General",    "howdy@candychic.com"],
+  ["Management", "Candychicbops@gmail.com"]
 ];
 
 const INQUIRY_TYPES = [
-  { label:"Booking",  email:"booking@candychic.com",    desc:"Show bookings, venue inquiries, tour requests" },
-  { label:"Press",    email:"management@candychic.com", desc:"Interviews, features, press kits" },
-  { label:"General",  email:"howdy@candychic.com",      desc:"Collabs, fan mail, everything else" },
+  { label:"Booking",  email:"Candychicbops@gmail.com",    desc:"Show bookings, venue inquiries, tour requests" },
+  { label:"Press",    email:"Candychicbops@gmail.com", desc:"Interviews, features, press kits" },
+  { label:"General",  email:"Candychicbops@gmail.com",      desc:"Collabs, fan mail, everything else" },
 ];
 
 const SHOW = {
