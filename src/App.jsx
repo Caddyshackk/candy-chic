@@ -511,14 +511,11 @@ export default function App() {
                 Based in Denver, CO — available for shows, press, and collaborations. Reach out and we'll get back to you within 48 hours.
               </p>
               <MarqueeDots/>
-              {CONTACTS.map(([lbl,val]) => (
-                <p key={lbl} style={{fontSize:"0.88rem",marginBottom:"0.6rem",fontFamily:FONTS.body}}>
-                  <span style={{fontWeight:600,color:C.neonCyan,marginRight:10,fontSize:"0.62rem",
-                    letterSpacing:"0.14em",textTransform:"uppercase",fontFamily:FONTS.ui,
-                    textShadow:GC(0.5)}}>{lbl}</span>
-                  <a href={`mailto:${val}`} style={{color:C.dimText,textDecoration:"none"}}>{val}</a>
-                </p>
-              ))}
+              <p style={{fontSize:"0.88rem",marginBottom:"0.6rem",fontFamily:FONTS.body}}>
+                <a href="mailto:howdy@candychic.com" style={{color:C.dimText,textDecoration:"none"}}>
+                  howdy@candychic.com
+                </a>
+              </p>
 
             </div>
             <div className="reveal reveal-right">
