@@ -491,6 +491,21 @@ export default function App() {
 
         <Divider color="cyan"/>
 
+        {/* ── SHOWS ── */}
+        <section id="shows" style={{padding:`${secY} ${pad}`,position:"relative",overflow:"hidden"}}>
+          <div style={{maxWidth:1060,margin:"0 auto"}}>
+            <p className="pulse-p" style={{fontSize:"0.62rem",fontWeight:500,letterSpacing:"0.26em",
+              textTransform:"uppercase",color:C.neonPink,marginBottom:"0.8rem"}}>On Tour</p>
+            <h2 style={{fontFamily:FONTS.display,fontSize:"clamp(1.8rem,3.2vw,2.8rem)",
+              fontWeight:700,marginBottom:"2.5rem",color:C.ivory}}>Upcoming Shows</h2>
+            <p style={{fontFamily:FONTS.body,fontStyle:"italic",color:C.sepia,fontSize:"1rem"}}>
+              No upcoming shows scheduled — check back soon.
+            </p>
+          </div>
+        </section>
+
+        <Divider color="cyan"/>
+
         {/* ── CONTACT ── */}
         <section id="contact" style={{padding:`${secY} ${pad}`,position:"relative",overflow:"hidden"}}>
           <div style={{position:"absolute",bottom:0,left:"5%",width:350,height:350,borderRadius:"50%",
