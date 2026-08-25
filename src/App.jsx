@@ -491,16 +491,30 @@ export default function App() {
 
         <Divider color="cyan"/>
 
-        {/* ── SHOWS ── */}
+                {/* ── SHOWS ── */}
         <section id="shows" style={{padding:`${secY} ${pad}`,position:"relative",overflow:"hidden"}}>
           <div style={{maxWidth:1060,margin:"0 auto"}}>
             <p className="pulse-p" style={{fontSize:"0.62rem",fontWeight:500,letterSpacing:"0.26em",
               textTransform:"uppercase",color:C.neonPink,marginBottom:"0.8rem"}}>On Tour</p>
             <h2 style={{fontFamily:FONTS.display,fontSize:"clamp(1.8rem,3.2vw,2.8rem)",
               fontWeight:700,marginBottom:"2.5rem",color:C.ivory}}>Upcoming Shows</h2>
-            <p style={{fontFamily:FONTS.body,fontStyle:"italic",color:C.sepia,fontSize:"1rem"}}>
-              No upcoming shows scheduled — check back soon.
-            </p>
+            <div style={{display:"flex",alignItems:"center",padding:"1.5rem 0.5rem",
+              borderBottom:`1px solid ${C.border}`,borderTop:`1px solid ${C.border}`,
+              gap:"1.5rem",flexWrap: mobile?"wrap":"nowrap"}}>
+              <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
+                color:C.gold,textShadow:GG(0.3),width:68,flexShrink:0}}>OCT 22</span>
+              <div style={{width:1,height:28,background:C.border,flexShrink:0}}/>
+              <span style={{flex:1,fontFamily:FONTS.body,fontSize:"1.1rem",
+                fontWeight:600,color:C.ivory}}>The Atrium Music Lounge</span>
+              <span style={{fontSize:"0.82rem",color:C.sepia,
+                fontFamily:FONTS.body,fontStyle:"italic",
+                flex: mobile?undefined:1}}>Fort Collins, CO</span>
+              <span style={{fontSize:"0.72rem",color:C.sepia,letterSpacing:"0.1em",
+                textTransform:"uppercase",fontFamily:FONTS.ui,
+                padding:"0.48rem 1.2rem",border:`1px solid ${C.border}`}}>
+                Tickets Coming Soon
+              </span>
+            </div>
           </div>
         </section>
 
