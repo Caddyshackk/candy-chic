@@ -519,8 +519,8 @@ export default function App() {
                     className="ticket-btn"
                     style={{fontSize:"0.65rem",letterSpacing:"0.14em",textTransform:"uppercase",
                       cursor:"pointer",fontFamily:FONTS.ui,textDecoration:"none",
-                      color:C.wine,padding:"0.48rem 1.2rem",
-                      border:`1px solid ${C.wine}`,transition:"all .25s"}}>
+                      color:C.neonCyan,padding:"0.48rem 1.2rem",
+                      border:`1px solid ${C.neonCyan}`,transition:"all .25s"}}>
                     Tickets
                   </a>
                 ) : (
