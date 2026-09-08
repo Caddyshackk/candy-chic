@@ -36,7 +36,7 @@ const SHOW = {
 };
 
 const SHOWS = [
-  { date:"2026-10-03", label:"OCT 3",  venue:"The Matchbox", city:"Denver, CO", url:"" },
+  { date:"2026-10-03", label:"OCT 3", venue:"The Matchbox", city:"Denver, CO", url:"" },
   { date:"2026-10-22", label:"OCT 22", venue:"The Atrium Music Lounge", city:"Fort Collins, CO", url:"https://www.theatriumfortcollins.com/" },
   { date:"2026-10-23", label:"OCT 23", venue:"LongHair Records", city:"Albequerque, NM", url:"" },
 ];
@@ -504,9 +504,10 @@ export default function App() {
               textTransform:"uppercase",color:C.neonPink,marginBottom:"0.8rem"}}>On Tour</p>
             <h2 style={{fontFamily:FONTS.display,fontSize:"clamp(1.8rem,3.2vw,2.8rem)",
               fontWeight:700,marginBottom:"2.5rem",color:C.ivory}}>Upcoming Shows</h2>
+            <div style={{borderTop:`1px solid ${C.border}`}}/>
             {SHOWS.map(s => (
               <div key={s.date} style={{display:"flex",alignItems:"center",padding:"1.5rem 0.5rem",
-                borderBottom:`1px solid ${C.border}`,borderTop:`1px solid ${C.border}`,
+                borderBottom:`1px solid ${C.border}`,
                 gap:"1.5rem",flexWrap:mobile?"wrap":"nowrap",marginBottom:"0.5rem"}}>
                 <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
                   color:C.gold,textShadow:GG(0.3),width:68,flexShrink:0}}>{s.label}</span>
