@@ -36,8 +36,9 @@ const SHOW = {
 };
 
 const SHOWS = [
-  { date:"2026-10-03", label:"OCT 3",  venue:"The Matchbox",            city:"Denver, CO",       url:"" },
+  { date:"2026-10-03", label:"OCT 3",  venue:"The Matchbox", city:"Denver, CO", url:"" },
   { date:"2026-10-22", label:"OCT 22", venue:"The Atrium Music Lounge", city:"Fort Collins, CO", url:"https://www.theatriumfortcollins.com/" },
+  { date:"2026-10-23", label:"OCT 23", venue:"LongHair Records", city:"Albequerque, NM", url:"" },
 ];
 
 // ─────────────────────────────────────────────
