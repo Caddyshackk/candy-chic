@@ -506,31 +506,60 @@ export default function App() {
               fontWeight:700,marginBottom:"2.5rem",color:C.ivory}}>Upcoming Shows</h2>
             <div style={{borderTop:`1px solid ${C.border}`}}/>
             {SHOWS.map(s => (
-              <div key={s.date} style={{display:"flex",alignItems:"center",padding:"1.5rem 0.5rem",
-                borderBottom:`1px solid ${C.border}`,
-                gap:"1.5rem",flexWrap:mobile?"wrap":"nowrap",marginBottom:"0.5rem"}}>
-                <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
-                  color:C.gold,textShadow:GG(0.3),width:68,flexShrink:0}}>{s.label}</span>
-                <div style={{width:1,height:28,background:C.border,flexShrink:0}}/>
-                <span style={{width:mobile?undefined:"340px",flexShrink:0,fontFamily:FONTS.body,fontSize:"1.1rem",
-                  fontWeight:600,color:C.ivory}}>{s.venue}</span>
-                <span style={{fontSize:"0.82rem",color:C.sepia,fontFamily:FONTS.body,
-                  fontStyle:"italic",flex:mobile?undefined:1}}>{s.city}</span>
-                {s.url ? (
-                  <a href={s.url} target="_blank" rel="noopener noreferrer"
-                    className="ticket-btn"
-                    style={{fontSize:"0.65rem",letterSpacing:"0.14em",textTransform:"uppercase",
-                      cursor:"pointer",fontFamily:FONTS.ui,textDecoration:"none",
-                      color:C.neonCyan,padding:"0.48rem 1.2rem",
-                      border:`1px solid ${C.neonCyan}`,transition:"all .25s"}}>
-                    Tickets
-                  </a>
+              <div key={s.date} style={{padding:"1.2rem 0",borderBottom:`1px solid ${C.border}`}}>
+                {mobile ? (
+                  <div style={{display:"flex",flexDirection:"column",gap:"0.5rem"}}>
+                    <div style={{display:"flex",alignItems:"center",gap:"1rem"}}>
+                      <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
+                        color:C.gold,textShadow:GG(0.3),flexShrink:0}}>{s.label}</span>
+                      <div style={{width:1,height:20,background:C.border,flexShrink:0}}/>
+                      <span style={{fontFamily:FONTS.body,fontSize:"1rem",
+                        fontWeight:600,color:C.ivory}}>{s.venue}</span>
+                    </div>
+                    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                      <span style={{fontSize:"0.8rem",color:C.sepia,fontFamily:FONTS.body,
+                        fontStyle:"italic"}}>{s.city}</span>
+                      {s.url ? (
+                        <a href={s.url} target="_blank" rel="noopener noreferrer"
+                          style={{fontSize:"0.65rem",letterSpacing:"0.14em",textTransform:"uppercase",
+                            fontFamily:FONTS.ui,textDecoration:"none",color:C.neonCyan,
+                            padding:"0.45rem 1rem",border:`1px solid ${C.neonCyan}`,transition:"all .25s"}}>
+                          Tickets
+                        </a>
+                      ) : (
+                        <span style={{fontSize:"0.65rem",color:C.sepia,letterSpacing:"0.1em",
+                          textTransform:"uppercase",fontFamily:FONTS.ui,
+                          padding:"0.45rem 1rem",border:`1px solid ${C.border}`}}>
+                          Tickets Soon
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 ) : (
-                  <span style={{fontSize:"0.72rem",color:C.sepia,letterSpacing:"0.1em",
-                    textTransform:"uppercase",fontFamily:FONTS.ui,
-                    padding:"0.48rem 1.2rem",border:`1px solid ${C.border}`}}>
-                    Tickets Soon
-                  </span>
+                  <div style={{display:"flex",alignItems:"center",gap:"1.5rem"}}>
+                    <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
+                      color:C.gold,textShadow:GG(0.3),width:68,flexShrink:0}}>{s.label}</span>
+                    <div style={{width:1,height:28,background:C.border,flexShrink:0}}/>
+                    <span style={{width:"340px",flexShrink:0,fontFamily:FONTS.body,fontSize:"1.1rem",
+                      fontWeight:600,color:C.ivory}}>{s.venue}</span>
+                    <span style={{fontSize:"0.82rem",color:C.sepia,fontFamily:FONTS.body,
+                      fontStyle:"italic",width:"180px",flexShrink:0}}>{s.city}</span>
+                    {s.url ? (
+                      <a href={s.url} target="_blank" rel="noopener noreferrer"
+                        style={{fontSize:"0.65rem",letterSpacing:"0.14em",textTransform:"uppercase",
+                          cursor:"pointer",fontFamily:FONTS.ui,textDecoration:"none",
+                          color:C.neonCyan,padding:"0.48rem 1.2rem",
+                          border:`1px solid ${C.neonCyan}`,transition:"all .25s"}}>
+                        Tickets
+                      </a>
+                    ) : (
+                      <span style={{fontSize:"0.72rem",color:C.sepia,letterSpacing:"0.1em",
+                        textTransform:"uppercase",fontFamily:FONTS.ui,
+                        padding:"0.48rem 1.2rem",border:`1px solid ${C.border}`}}>
+                        Tickets Soon
+                      </span>
+                    )}
+                  </div>
                 )}
               </div>
             ))}
