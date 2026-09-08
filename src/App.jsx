@@ -515,7 +515,7 @@ export default function App() {
                 <span style={{flex:1,fontFamily:FONTS.body,fontSize:"1.1rem",
                   fontWeight:600,color:C.ivory}}>{s.venue}</span>
                 <span style={{fontSize:"0.82rem",color:C.sepia,fontFamily:FONTS.body,
-                  fontStyle:"italic",flex:mobile?undefined:1}}>{s.city}</span>
+                  fontStyle:"italic",width:mobile?undefined:"180px",flexShrink:0}}>{s.city}</span>
                 {s.url ? (
                   <a href={s.url} target="_blank" rel="noopener noreferrer"
                     className="ticket-btn"
