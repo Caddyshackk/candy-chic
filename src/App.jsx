@@ -542,6 +542,8 @@ export default function App() {
                     <div style={{width:1,height:28,background:C.border,flexShrink:0}}/>
                     <span style={{flex:1,fontFamily:FONTS.body,fontSize:"1.1rem",
                       fontWeight:600,color:C.ivory}}>{s.venue}</span>
+                      <span style={{flex:1,minWidth:0,fontFamily:FONTS.body,fontSize:"1.1rem",
+                      fontWeight:600,color:C.ivory}}>{s.venue}</span>
                     <span style={{fontSize:"0.82rem",color:C.sepia,fontFamily:FONTS.body,
                       fontStyle:"italic",width:"180px",flexShrink:0}}>{s.city}</span>
                     {s.url ? (
