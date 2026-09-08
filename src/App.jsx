@@ -540,24 +540,23 @@ export default function App() {
                     <span style={{fontFamily:FONTS.display,fontSize:"0.88rem",fontWeight:700,
                       color:C.gold,textShadow:GG(0.3),width:68,flexShrink:0}}>{s.label}</span>
                     <div style={{width:1,height:28,background:C.border,flexShrink:0}}/>
-                    <span style={{flex:1,fontFamily:FONTS.body,fontSize:"1.1rem",
-                      fontWeight:600,color:C.ivory}}>{s.venue}</span>
-                      <span style={{flex:1,minWidth:0,fontFamily:FONTS.body,fontSize:"1.1rem",
-                      fontWeight:600,color:C.ivory}}>{s.venue}</span>
+                    <span style={{flex:1,minWidth:0,fontFamily:FONTS.body,fontSize:"1.1rem",
+                      fontWeight:600,color:C.ivory,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{s.venue}</span>
                     <span style={{fontSize:"0.82rem",color:C.sepia,fontFamily:FONTS.body,
-                      fontStyle:"italic",width:"180px",flexShrink:0}}>{s.city}</span>
+                      fontStyle:"italic",width:"160px",flexShrink:0,textAlign:"right"}}>{s.city}</span>
                     {s.url ? (
                       <a href={s.url} target="_blank" rel="noopener noreferrer"
                         style={{fontSize:"0.65rem",letterSpacing:"0.14em",textTransform:"uppercase",
                           cursor:"pointer",fontFamily:FONTS.ui,textDecoration:"none",
-                          color:C.neonCyan,padding:"0.48rem 1.2rem",
-                          border:`1px solid ${C.neonCyan}`,transition:"all .25s"}}>
+                          color:C.neonCyan,padding:"0.55rem 0",width:"120px",textAlign:"center",
+                          border:`1px solid ${C.neonCyan}`,transition:"all .25s",flexShrink:0}}>
                         Tickets
                       </a>
                     ) : (
-                      <span style={{fontSize:"0.72rem",color:C.sepia,letterSpacing:"0.1em",
-                        textTransform:"uppercase",fontFamily:FONTS.ui,
-                        padding:"0.48rem 1.2rem",border:`1px solid ${C.border}`}}>
+                      <span style={{fontSize:"0.65rem",color:C.sepia,letterSpacing:"0.14em",
+                        textTransform:"uppercase",fontFamily:FONTS.ui,flexShrink:0,
+                        padding:"0.55rem 0",width:"120px",textAlign:"center",
+                        border:`1px solid ${C.border}`,display:"inline-block"}}>
                         Tickets Soon
                       </span>
                     )}
