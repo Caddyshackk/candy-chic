@@ -505,7 +505,7 @@ export default function App() {
             <h2 style={{fontFamily:FONTS.display,fontSize:"clamp(1.8rem,3.2vw,2.8rem)",
               fontWeight:700,marginBottom:"2.5rem",color:C.ivory}}>Upcoming Shows</h2>
             <div style={{borderTop:`1px solid ${C.border}`}}/>
-            {SHOWS.map(s => (
+            {SHOWS.filter(s => new Date(s.date) >= new Date()).map(s => (
               <div key={s.date} style={{padding:"1.2rem 0",borderBottom:`1px solid ${C.border}`}}>
                 {mobile ? (
                   <div style={{display:"flex",flexDirection:"column",gap:"0.5rem"}}>
