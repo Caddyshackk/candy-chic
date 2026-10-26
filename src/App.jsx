@@ -207,7 +207,7 @@ function MobileNav({ open, onClose, go, navItems }) {
           backgroundPosition:photo.pos,
           opacity: i === photoIdx ? 1 : 0,
           transition:"opacity 0.6s ease",
-          filter:"saturate(0.9) brightness(0.55)",
+          filter:"saturate(0.9) brightness(0.85)",
           willChange:"opacity",
         }}/>
       ))}
