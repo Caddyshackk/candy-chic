@@ -145,8 +145,8 @@ function CustomCursor() {
     window.addEventListener("mousemove", onMove);
     let raf;
     const tick = () => {
-      cur.current.x += (pos.current.x - cur.current.x) * 0.95;
-      cur.current.y += (pos.current.y - cur.current.y) * 0.95;
+      cur.current.x = pos.current.x;
+      cur.current.y = pos.current.y;
       if (ringRef.current) ringRef.current.style.transform = `translate(${cur.current.x-16}px,${cur.current.y-16}px)`;
       if (dotRef.current)  dotRef.current.style.transform  = `translate(${pos.current.x-3}px,${pos.current.y-3}px)`;
       raf = requestAnimationFrame(tick);
